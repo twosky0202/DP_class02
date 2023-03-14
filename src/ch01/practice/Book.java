@@ -4,11 +4,11 @@ public class Book {
     // 속성
     private String name = "";
 
+    // 메소드
     public Book(String name) {
         this.name = name;
     }
-    
-    // 메소드
+
     public String getName() {
         return name;
     } 
