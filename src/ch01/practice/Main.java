@@ -33,13 +33,12 @@ public class Main {
         }
 
         // iterator 패턴을 이용해서 책 이름 출력하기
-
-        // 1: 집합체(책꽂이)로부터 iterator 얻어오기
+        System.out.println("iterator 사용");
         
+        // 1: 집합체(책꽂이)로부터 iterator 얻어오기
         BookShelfIterator iterator = bs1.iterator();
 
         // 2: iterator 통해서 원소(책) 얻어오기
-        System.out.println("iterator 사용");
         while(iterator.hasNext()) {
             System.out.println(iterator.next().getName());
         }
