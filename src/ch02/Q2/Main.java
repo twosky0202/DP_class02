@@ -4,7 +4,8 @@ import java.io.IOException;
 
 public class Main {
     public static void main(String[] args) {
-        FileIO f = new FileProperties();
+        FileIO f = new FileProperties(); // 어댑터 생성
+        
         try {
             f.readFromFile("file.txt");
             f.setValue("width", "1024");
