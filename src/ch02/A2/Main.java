@@ -14,6 +14,7 @@ public class Main {
             f.setValue("depth", "32");
 
             f.setValue("name", "lhn");
+            f.setValue("age", "20");
 
             f.writeToFile("newfile.txt");
             System.out.println("newfile.txt is created.");
