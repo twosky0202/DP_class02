@@ -6,7 +6,7 @@ public class Main {
     public static void main(String[] args) {
         System.out.println("20210821 이하늘");
         
-        FileIO f = new FileProperties(); // 어댑터 생성
+        FileIO f = new FileProperties();
 
         try {
             // f.readFromFile("file.txt");
