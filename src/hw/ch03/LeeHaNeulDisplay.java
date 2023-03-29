@@ -25,7 +25,6 @@ public class LeeHaNeulDisplay extends AbstractDisplay {
 
     @Override
     public void close() {
-        // 종료 문자열 ">>"를 표시한다 
         System.out.println("템플릿 메소드 패턴 숙제입니다.");
         System.out.println("================================");
     }
