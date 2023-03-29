@@ -12,7 +12,7 @@ public class Main {
             // f.readFromFile("file.txt");
 
             f.setValue("Year", "2023");
-            f.setValue("bornYear", "2003");
+            f.setValue("BornYear", "2003");
             f.setValue("StudentId", "20210821");
             f.setValue("Name", "LeeHaNeul");
             f.setValue("Location", "Seoul");
