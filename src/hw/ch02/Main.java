@@ -9,7 +9,7 @@ public class Main {
         FileIO f = new FileProperties(); // 어댑터 생성
 
         try {
-            f.readFromFile("file.txt");
+            // f.readFromFile("file.txt");
 
             f.setValue("Year", "2023");
             f.setValue("bornYear", "2003");
