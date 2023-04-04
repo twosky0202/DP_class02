@@ -24,10 +24,10 @@ public class MessageBox implements Product {
     }
 
     @Override
-    public Product createCopy() {
+    public Product createCopy() { // 자기 복제 매소드
         Product p = null;
         try {
-            p = (Product)clone();
+            p = (Product)clone(); // 실제로 복제품을 만드는 메소드
         } catch (CloneNotSupportedException e) {
             e.printStackTrace();
         }
