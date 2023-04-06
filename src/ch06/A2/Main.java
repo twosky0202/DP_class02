@@ -5,18 +5,22 @@ import ch06.A2.framework.Product;
 
 public class Main {
     public static void main(String[] args) {
-        // 準備
+        // 준비
         Manager manager = new Manager();
         UnderlinePen upen = new UnderlinePen('-');
         MessageBox mbox = new MessageBox('*');
         MessageBox sbox = new MessageBox('/');
 
-        // 登録
+        // 복사 생성자 호출
+        MessageBox copyOfsbox = new MessageBox(sbox);
+        copyOfsbox.use("Duksung");
+
+        // 등록
         manager.register("strong message", upen);
         manager.register("warning box", mbox);
         manager.register("slash box", sbox);
 
-        // 生成と使用
+        // 생성과 사용 
         Product p1 = manager.create("strong message");
         p1.use("Hello, world.");
 
