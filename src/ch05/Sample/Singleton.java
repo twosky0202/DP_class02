@@ -1,6 +1,7 @@
 package ch05.Sample;
 
 public class Singleton {
+    // eager initialization
     private static Singleton singleton = new Singleton();
 
     private Singleton() {
