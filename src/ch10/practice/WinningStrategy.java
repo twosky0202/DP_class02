@@ -3,7 +3,7 @@ package ch10.practice;
 import java.util.Random;
 
 public class WinningStrategy implements Strategy {
-    private Random random; // 임이의 수 생성기
+    private Random random; // 임의의 수 생성기
     private boolean won = false;
     private Hand prevHand;
 
