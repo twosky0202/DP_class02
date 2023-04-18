@@ -10,7 +10,7 @@ class Main {
         // 익명의 클래스를 이용해서 Comparator 객체를 생성함 -> 한번만 쓰는 경우에 익명 클래스
         list.sort(new Comparator<String>() { // 타입 없으면 Object 비교
             public int compare(String a, String b) {
-                return a.compareTo(b);
+                return a.compareTo(b); // 음수가 리턴 되면 그대로, 양수면 a와 b위치 바꾸기
             }
         });
         System.out.println(list);
