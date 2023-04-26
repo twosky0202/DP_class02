@@ -1,7 +1,8 @@
 package ch12.Sample;
 
+// 중심을 나타내는 클래스
 public class StringDisplay extends Display {
-    private String string; // 표시 문자열 
+    private String string; // 표시 문자열
 
     public StringDisplay(String string) {
         this.string = string;
@@ -20,7 +21,7 @@ public class StringDisplay extends Display {
     @Override
     public String getRowText(int row) {
         if (row != 0) {
-            throw new IndexOutOfBoundsException();
+            throw new IndexOutOfBoundsException(); // 예외 객체 생성
         }
         return string;
     }

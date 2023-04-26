@@ -19,12 +19,12 @@ public class FullBorder extends Border {
 
     @Override
     public String getRowText(int row) {
-        if (row == 0) {                                             	// 상단 테두리
+        if (row == 0) { // 상단 테두리
             return "+" + makeLine('-', display.getColumns()) + "+";
-        } else if (row == display.getRows() + 1) {                 	// 하단 테두리
+        } else if (row == display.getRows() + 1) { // 하단 테두리
             return "+" + makeLine('-', display.getColumns()) + "+";
-        } else {                                                    		// 기타
-            return "|" + display.getRowText(row - 1) + "|";
+        } else { // 기타
+            return "|" + display.getRowText(row - 1) + "|"; // 내용물 입장에서는 0번째 행 -> 요청 행 수 보다 1을 빼야 함
         }
     }
 

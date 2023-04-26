@@ -1,11 +1,11 @@
 package ch12.Sample;
 
 public class SideBorder extends Border {
-    private char borderChar;  // 장식 문자
+    private char borderChar; // 장식 문자
 
     // 내용물이 될 Display와 장식 문자를 지정
     public SideBorder(Display display, char ch) {
-        super(display);
+        super(display); // 부모 생성자 호출
         this.borderChar = ch;
     }
 
@@ -17,7 +17,7 @@ public class SideBorder extends Border {
 
     @Override
     public int getRows() {
-        // 행수는 내용물의 행수와 같다 
+        // 행수는 내용물의 행수와 같다
         return display.getRows();
     }
 
