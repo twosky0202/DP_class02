@@ -1,7 +1,7 @@
 package ch12.A1;
 
 public class UpDownBorder extends Border {
-    private char borderChar;  // 장식 문자 
+    private char borderChar; // 장식 문자
 
     // 내용물이 될 Display와 장식 문자를 지정
     public UpDownBorder(Display display, char ch) {
@@ -11,13 +11,13 @@ public class UpDownBorder extends Border {
 
     @Override
     public int getColumns() {
-        // 문자 수는 내용물의 문자 수와 같다 
+        // 문자 수는 내용물의 문자 수와 같다
         return display.getColumns();
     }
 
     @Override
     public int getRows() {
-        // 행수는 내용물의 행수에 상하 장식 문자 수를 더한 것 
+        // 행수는 내용물의 행수에 상하 장식 문자 수를 더한 것
         return 1 + display.getRows() + 1;
     }
 
