@@ -12,7 +12,7 @@ public class ColleagueTextField extends TextField implements TextListener, Colle
         super(text, columns);
     }
 
-    // Mediator를 설정한다 
+    // Mediator를 설정한다
     @Override
     public void setMediator(Mediator mediator) {
         this.mediator = mediator;
@@ -23,7 +23,7 @@ public class ColleagueTextField extends TextField implements TextListener, Colle
     public void setColleagueEnabled(boolean enabled) {
         setEnabled(enabled);
         // 활성/비활성에 맞게 배경색을 변경한다
-        setBackground(enabled ? Color.white : Color.lightGray);
+        setBackground(enabled ? Color.white : Color.lightGray); // 조건식? true일때 : false일때. enabled가 true이면 white, false이면 lightGray
     }
 
     @Override
