@@ -9,7 +9,7 @@ public class ColleagueTextField extends TextField implements TextListener, Colle
     private Mediator mediator;
 
     public ColleagueTextField(String text, int columns) {
-        super(text, columns);
+        super(text, columns); // TextField의 생성자
     }
 
     // Mediator를 설정한다
@@ -23,11 +23,11 @@ public class ColleagueTextField extends TextField implements TextListener, Colle
     public void setColleagueEnabled(boolean enabled) {
         setEnabled(enabled);
         // 활성/비활성에 맞게 배경색을 변경한다
-        setBackground(enabled ? Color.white : Color.lightGray); // 조건식? true일때 : false일때. enabled가 true이면 white, false이면 lightGray
+        setBackground(enabled ? Color.white : Color.lightGray); // enabled가 true이면 white, false이면 lightGray
     }
 
     @Override
-    public void textValueChanged(TextEvent e) {
+    public void textValueChanged(TextEvent e) { // TextListener가 하는 일
         // 문자열이 변화했으면 Mediator에 알린다
         mediator.colleagueChanged();
     }

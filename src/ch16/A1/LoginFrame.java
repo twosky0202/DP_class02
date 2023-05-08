@@ -26,10 +26,10 @@ public class LoginFrame extends Frame implements ActionListener, Mediator {
         // 레이아웃 매니저를 사용해 4×2 그리드를 만든다
         setLayout(new GridLayout(4, 2));
 
-        // Colleague를 생성한다 
+        // Colleague를 생성한다
         createColleagues();
 
-        // 배치한다 
+        // 배치한다
         add(checkGuest);
         add(checkLogin);
         add(new Label("Username:"));
@@ -42,7 +42,7 @@ public class LoginFrame extends Frame implements ActionListener, Mediator {
         // 활성/비활성 초기 설정을 한다
         colleagueChanged();
 
-        // 표시한다 
+        // 표시한다
         pack();
         setVisible(true);
     }
@@ -64,7 +64,7 @@ public class LoginFrame extends Frame implements ActionListener, Mediator {
         buttonOk = new ColleagueButton("OK");
         buttonCancel = new ColleagueButton("Cancel");
 
-        // Mediator를 설정한다 
+        // Mediator를 설정한다
         checkGuest.setMediator(this);
         checkLogin.setMediator(this);
         textUser.setMediator(this);
@@ -85,23 +85,24 @@ public class LoginFrame extends Frame implements ActionListener, Mediator {
     @Override
     public void colleagueChanged() {
         if (checkGuest.getState()) {
-            // 게스트 로그인 
+            // 게스트 로그인
             textUser.setColleagueEnabled(false);
             textPass.setColleagueEnabled(false);
             buttonOk.setColleagueEnabled(true);
         } else {
-            // 사용자 로그인 
+            // 사용자 로그인
             textUser.setColleagueEnabled(true);
             userpassChanged();
         }
     }
 
-    // textUser 또는 textPass의 변경이 있다 
+    // textUser 또는 textPass의 변경이 있다
     // 각 Colleage의 활성/비활성을 판정한다
     private void userpassChanged() {
         if (textUser.getText().length() > 0) {
             textPass.setColleagueEnabled(true);
-             if (textUser.getText().length() >= 4 && textPass.getText().length() >= 4) {
+            // 사용자 이름과 패스워드가 모두 4문자 이상인 경우에만 ok버튼 활성화
+            if (textUser.getText().length() >= 4 && textPass.getText().length() >= 4) {
                 buttonOk.setColleagueEnabled(true);
             } else {
                 buttonOk.setColleagueEnabled(false);
