@@ -10,8 +10,8 @@ import java.awt.event.ActionListener;
 
 import javax.swing.JOptionPane;
 
-// ActionListener: 버튼을 눌렀을 때 동작하는 일을 하는 리스너
 public class LoginFrame extends Frame implements ActionListener, Mediator {
+    // ActionListener: 버튼을 눌렀을 때 동작하는 일을 하는 리스너
     private ColleagueCheckbox checkGuest;
     private ColleagueCheckbox checkLogin;
     private ColleagueCheckbox checkMember;
