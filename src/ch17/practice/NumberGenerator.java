@@ -1,8 +1,9 @@
-package ch17.Sample;
+package ch17.practice;
 
 import java.util.ArrayList;
 import java.util.List;
 
+// 관찰 대상
 public abstract class NumberGenerator {
     // Observer를 저장한다
     private List<Observer> observers = new ArrayList<>();
@@ -19,8 +20,9 @@ public abstract class NumberGenerator {
 
     // Observer에 통지한다
     public void notifyObservers() {
+        // 확장 for 문
         for (Observer o : observers) {
-            o.update(this);
+            o.update(this); // 관찰자에게 통지함
         }
     }
 
