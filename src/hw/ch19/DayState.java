@@ -12,7 +12,7 @@ public class DayState implements State {
 
     @Override
     public void doClock(Context context, int hour) {
-        if (hour < 15 || 17 <= hour) {
+        if (17 <= hour && hour < 20) {
             context.changeState(NightState.getInstance());
         } else if (20 <= hour && hour < 24) {
             context.changeState(NightMealState.getInstance());
@@ -35,12 +35,12 @@ public class DayState implements State {
     }
 
     @Override
-    public String toString() {
-        return "[주간]";
+    public void doCCTV(Context context) {
+        context.recordLog("CCTV : 해상도 600 dpi로 변경");
     }
 
     @Override
-    public void doCCTV(Context context) {
-        context.recordLog("CCTV : 해상도 600 dpi로 변경");
+    public String toString() {
+        return "[주간]";
     }
 }

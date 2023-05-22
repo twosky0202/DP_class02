@@ -36,12 +36,12 @@ public class NightMealState implements State {
     }
 
     @Override
-    public String toString() {
-        return "[야식]";
+    public void doCCTV(Context context) {
+        context.recordLog("CCTV : off");
     }
 
     @Override
-    public void doCCTV(Context context) {
-        context.recordLog("CCTV : off");
+    public String toString() {
+        return "[야식]";
     }
 }

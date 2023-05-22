@@ -35,12 +35,12 @@ public class NightState implements State {
     }
 
     @Override
-    public String toString() {
-        return "[야간]";
+    public void doCCTV(Context context) {
+        context.recordLog("CCTV : 해상도 1200 dpi로 변경");
     }
 
     @Override
-    public void doCCTV(Context context) {
-        context.recordLog("CCTV : 해상도 1200 dpi로 변경");
+    public String toString() {
+        return "[야간]";
     }
 }
