@@ -1,6 +1,6 @@
 package ch19.A3;
 
-public class NoonState implements State {
+public class NoonState implements State { // 점심 시간 상태 추가
     private static NoonState singleton = new NoonState();
 
     private NoonState() {

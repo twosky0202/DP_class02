@@ -14,7 +14,7 @@ public class DayState implements State {
     public void doClock(Context context, int hour) {
         if (hour < 9 || 17 <= hour) {
             context.changeState(NightState.getInstance());
-        } else if (12 <= hour && hour < 13) {
+        } else if (12 <= hour && hour < 13) { // 현재 점심 시간이면
             context.changeState(NoonState.getInstance());
         }
     }
