@@ -10,13 +10,15 @@ public class HtmlWriter {
         this.writer = writer;
     }
 
-    // 타이틀 출력 
+    // 타이틀 출력
     public void title(String title) throws IOException {
         writer.write("<!DOCTYPE html>");
         writer.write("<html>");
+
         writer.write("<head>");
         writer.write("<title>" + title + "</title>");
         writer.write("</head>");
+
         writer.write("<body>");
         writer.write("\n");
         writer.write("<h1>" + title + "</h1>");
@@ -34,12 +36,12 @@ public class HtmlWriter {
         paragraph("<a href=\"" + href + "\">" + caption + "</a>");
     }
 
-    // 이메일 주소 출력 
+    // 이메일 주소 출력
     public void mailto(String mailaddr, String username) throws IOException {
         link("mailto:" + mailaddr, username);
     }
 
-    // HTML 닫기 
+    // HTML 닫기
     public void close() throws IOException {
         writer.write("</body>");
         writer.write("</html>");
