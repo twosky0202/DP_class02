@@ -1,6 +1,6 @@
 package ch07.practice;
 
-public class TextBuilder extends Builder {
+public class TextBuilder implements Builder {
     private StringBuilder sb = new StringBuilder(); // vs StringBuffer.
     // 기능은 동일하지만 StringBuilder가 더 빠름. 그러나 StringBuilder는 멀티스레드를 지원하지 않는다.
 
