@@ -3,7 +3,7 @@ package ch15.Sample.pagemaker;
 import java.io.Writer;
 import java.io.IOException;
 
-public class HtmlWriter {
+class HtmlWriter { // 패키지 밖에서 이용할 수 없음
     private Writer writer;
 
     public HtmlWriter(Writer writer) {

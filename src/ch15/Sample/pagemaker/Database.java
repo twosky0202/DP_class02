@@ -4,7 +4,7 @@ import java.io.FileReader;
 import java.io.IOException;
 import java.util.Properties;
 
-public class Database {
+class Database { // 패키지 밖에서 이용할 수 없음
     // 객체 만들지 못함
     private Database() {
     }
