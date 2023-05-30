@@ -10,7 +10,7 @@ public class Director {
 
     // 문서를 만드는 메소드
     public void construct() { // 빌더에게 일을 시킴
-        builder.makeTitle("Greeting");
+        builder.makeTitle("이하늘");
         builder.makeString("일반적인 인사");
         builder.makeItems(new String[] {
                 "How are you?",

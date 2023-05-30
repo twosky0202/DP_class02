@@ -28,7 +28,7 @@ public class Main {
         }
     }
 
-    // 사용 방법을 표시한다 
+    // 사용 방법을 표시한다
     public static void usage() {
         System.out.println("Usage: java Main text       텍스트로 문서 작성");
         System.out.println("Usage: java Main html       HTML 파일로 문서 작성");

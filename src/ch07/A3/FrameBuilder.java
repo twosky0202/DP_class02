@@ -6,7 +6,7 @@ import javax.swing.*;
 
 public class FrameBuilder extends Builder {
     private JFrame frame = new JFrame();
-    private Box box = new Box(BoxLayout.Y_AXIS);
+    private Box box = new Box(BoxLayout.Y_AXIS); // 세로줄로 나열
 
     @Override
     public void makeTitle(String title) {
@@ -23,13 +23,15 @@ public class FrameBuilder extends Builder {
     @Override
     public void makeItems(String[] items) {
         Box innerbox = new Box(BoxLayout.Y_AXIS);
-        for (String caption: items) {
+
+        for (String caption : items) {
             JButton button = new JButton(caption);
-            button.addActionListener(e -> {
+            button.addActionListener(e -> { // 람다식
                 System.out.println(e.getActionCommand());
             });
             innerbox.add(button);
         }
+
         innerbox.setBorder(BorderFactory.createEmptyBorder(10, 10, 10, 10));
         box.add(innerbox);
     }

@@ -30,7 +30,7 @@ public class HTMLBuilder extends Builder {
     @Override
     public void makeItems(String[] items) {
         sb.append("<ul>\n");
-        for (String s: items) {
+        for (String s : items) {
             sb.append("<li>");
             sb.append(s);
             sb.append("</li>\n");
