@@ -1,4 +1,4 @@
-package ch07.Sample;
+package ch07.practice;
 
 public abstract class Builder {
     public abstract void makeTitle(String title);

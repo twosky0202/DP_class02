@@ -1,4 +1,4 @@
-package ch07.Sample;
+package ch07.practice;
 
 public class Director {
     private Builder builder; // 부모 타입

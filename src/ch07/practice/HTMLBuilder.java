@@ -1,4 +1,4 @@
-package ch07.Sample;
+package ch07.practice;
 
 import java.io.*;
 
@@ -9,6 +9,7 @@ public class HTMLBuilder extends Builder {
     @Override
     public void makeTitle(String title) {
         filename = title + ".html";
+
         sb.append("<!DOCTYPE html>\n");
         sb.append("<html>\n");
         sb.append("<head><title>");
@@ -30,6 +31,7 @@ public class HTMLBuilder extends Builder {
     @Override
     public void makeItems(String[] items) {
         sb.append("<ul>\n");
+
         for (String s : items) {
             sb.append("<li>");
             sb.append(s);
@@ -42,6 +44,7 @@ public class HTMLBuilder extends Builder {
     public void close() {
         sb.append("</body>");
         sb.append("</html>\n");
+
         try {
             Writer writer = new FileWriter(filename);
             writer.write(sb.toString());
