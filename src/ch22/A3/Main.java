@@ -10,21 +10,23 @@ import javax.swing.*;
 public class Main extends JFrame {
     // 그리기 이력
     private MacroCommand history = new MacroCommand();
-    // 그리는 영역 
+    // 그리는 영역
     private DrawCanvas canvas = new DrawCanvas(400, 400, history);
-    // 삭제 버튼 
-    private JButton clearButton  = new JButton("clear");
+    // 삭제 버튼
+    private JButton clearButton = new JButton("clear");
 
-    // 생성자 
+    // 생성자
     public Main(String title) {
         super(title);
 
+        // 어댑터 사용 -> bin에 Main$1.java 라는 이름의 파일이 생김
         this.addWindowListener(new WindowAdapter() {
             public void windowClosing(WindowEvent e) {
                 System.exit(0);
             }
         });
 
+        // 어댑터 사용 -> bin에 Main$2.java 라는 이름의 파일이 생김
         canvas.addMouseMotionListener(new MouseMotionAdapter() {
             public void mouseDragged(MouseEvent e) {
                 Command cmd = new DrawCommand(canvas, e.getPoint());

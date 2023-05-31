@@ -4,13 +4,13 @@ import ch22.A2.command.Command;
 import java.awt.Point;
 
 public class DrawCommand implements Command {
-    // 그리는 대상 
+    // 그리는 대상
     protected Drawable drawable;
 
-    // 그리는 위치 
+    // 그리는 위치
     private Point position;
 
-    // 생성자 
+    // 생성자
     public DrawCommand(Drawable drawable, Point position) {
         this.drawable = drawable;
         this.position = position;

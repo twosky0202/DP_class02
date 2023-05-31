@@ -7,14 +7,14 @@ import java.awt.Graphics;
 import java.awt.Canvas;
 
 public class DrawCanvas extends Canvas implements Drawable {
-    // 그리기 색 
+    // 그리기 색
     private Color color;
     // 그리기 점의 반경
     private int radius;
-    // 이력 
+    // 이력
     private MacroCommand history;
 
-    // 생성자 
+    // 생성자
     public DrawCanvas(int width, int height, MacroCommand history) {
         setSize(width, height);
         setBackground(Color.white);
@@ -28,7 +28,7 @@ public class DrawCanvas extends Canvas implements Drawable {
         history.execute();
     }
 
-    // 초기화 
+    // 초기화
     @Override
     public void init() {
         color = Color.red;
@@ -36,7 +36,7 @@ public class DrawCanvas extends Canvas implements Drawable {
         history.append(new ColorCommand(this, color));
     }
 
-    // 그리기 
+    // 그리기
     @Override
     public void draw(int x, int y) {
         Graphics g = getGraphics();

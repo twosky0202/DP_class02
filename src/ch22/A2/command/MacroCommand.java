@@ -4,18 +4,18 @@ import java.util.ArrayDeque;
 import java.util.Deque;
 
 public class MacroCommand implements Command {
-    // 명령의 배열 
+    // 명령의 배열
     private Deque<Command> commands = new ArrayDeque<>();
 
-    // 실행 
+    // 실행
     @Override
     public void execute() {
-        for (Command cmd: commands) {
+        for (Command cmd : commands) {
             cmd.execute();
         }
     }
 
-    // 추가 
+    // 추가
     public void append(Command cmd) {
         if (cmd == this) {
             throw new IllegalArgumentException("infinite loop caused by append");
@@ -26,11 +26,11 @@ public class MacroCommand implements Command {
     // 마지막 명령을 삭제
     public void undo() {
         if (!commands.isEmpty()) {
-            commands.pop();
+            commands.pop(); // 하나씩 꺼냄
         }
     }
 
-    // 전부 삭제 
+    // 전부 삭제
     public void clear() {
         commands.clear();
     }
