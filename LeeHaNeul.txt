@@ -1,0 +1,7 @@
+#written by FileProperties
+#Thu Mar 30 04:54:38 KST 2023
+Year=2023
+BornYear=2003
+StudentId=20210821
+Name=LeeHaNeul
+Location=Seoul

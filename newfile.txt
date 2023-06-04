@@ -1,0 +1,7 @@
+#written by FileProperties
+#Thu Mar 30 01:54:53 KST 2023
+bornYear=2003
+Year=2023
+StudentId=20210821
+Name=leehaneul
+Location=seoul
