@@ -2,7 +2,7 @@ package ch14.Sample;
 
 public class NoSupport extends Support {
     public NoSupport(String name) {
-        super(name);
+        super(name); // 부모 생성자 호출
     }
 
     @Override
