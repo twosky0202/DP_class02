@@ -1,9 +1,11 @@
 package ch21.Sample;
-public class Printer implements Printable {
-    private String name; // 이름 
 
-    // 생성자 
-    public Printer() {
+// 본인
+public class Printer implements Printable {
+    private String name; // 이름
+
+    // 생성자
+    public Printer() { // 생성하는데 오래 걸림
         heavyJob("Printer 인스턴스 생성 중");
     }
 
@@ -13,13 +15,13 @@ public class Printer implements Printable {
         heavyJob("Printer 인스턴스(" + name + ") 생성 중");
     }
 
-    // 이름 설정 
+    // 이름 설정
     @Override
     public void setPrinterName(String name) {
         this.name = name;
     }
 
-    // 이름 취득 
+    // 이름 취득
     @Override
     public String getPrinterName() {
         return name;
