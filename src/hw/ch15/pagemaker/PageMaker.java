@@ -50,14 +50,14 @@ public class PageMaker {
         try {
             HtmlWriter writer = new HtmlWriter( // 한글 출력을 위해 인코딩 설정 바꿔주기
                     new OutputStreamWriter(new FileOutputStream(filename), StandardCharsets.UTF_8));
-            writer.title("url page");
-            writer.title2("이하늘의 URL Page");
+            writer.title2("url page");
+            writer.h1("이하늘의 URL Page");
 
             Properties urlprop = Database.getProperties("urldata"); // 프로퍼티를 얻어옴
 
-            for (String url : urlprop.stringPropertyNames()) { // 프로퍼티 이름(키)을 얻어옴
-                String urlname = urlprop.getProperty(url, "(unknown)");
-                writer.link(urlname, url);
+            for (String urlname : urlprop.stringPropertyNames()) { // 프로퍼티 이름(키)을 얻어옴
+                String url = urlprop.getProperty(urlname, "(unknown)");
+                writer.link(url, urlname);
             }
 
             writer.close();

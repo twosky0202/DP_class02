@@ -19,10 +19,22 @@ public class HtmlWriter {
         writer.write("</head>");
         writer.write("<body>");
         writer.write("\n");
+        writer.write("<h1>" + title + "</h1>");
+        writer.write("\n");
     }
 
     public void title2(String title) throws IOException {
-        writer.write("<h1>" + title + "</h1>");
+        writer.write("<!DOCTYPE html>");
+        writer.write("<html>");
+        writer.write("<head>");
+        writer.write("<title>" + title + "</title>");
+        writer.write("</head>");
+        writer.write("<body>");
+        writer.write("\n");
+    }
+
+    public void h1(String h1) throws IOException {
+        writer.write("<h1>" + h1 + "</h1>");
         writer.write("\n");
     }
 
