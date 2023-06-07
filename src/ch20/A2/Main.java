@@ -6,6 +6,7 @@ public class Main {
     public static void main(String[] args) {
         System.out.println("공유한 경우:");
         testAllocation(true);
+
         System.out.println("공유하지 않는 경우:");
         testAllocation(false);
     }
@@ -18,8 +19,8 @@ public class Main {
     }
 
     public static void showMemory() {
-        Runtime.getRuntime().gc();
-        long used = Runtime.getRuntime().totalMemory() - Runtime.getRuntime().freeMemory();
+        Runtime.getRuntime().gc(); // 현재 프로그램이 실행되는 환경의 가비지 컬렉션
+        long used = Runtime.getRuntime().totalMemory() - Runtime.getRuntime().freeMemory(); // 전체 메모리 - 안쓰는 메모리
         System.out.println("사용 메모리 = " + used);
     }
 }
