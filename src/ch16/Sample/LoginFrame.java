@@ -12,7 +12,7 @@ import java.awt.event.ActionListener;
 public class LoginFrame extends Frame implements ActionListener, Mediator {
     private ColleagueCheckbox checkGuest;
     private ColleagueCheckbox checkLogin;
-    
+
     private ColleagueTextField textUser;
     private ColleagueTextField textPass;
 
@@ -80,7 +80,7 @@ public class LoginFrame extends Frame implements ActionListener, Mediator {
         checkLogin.addItemListener(checkLogin);
         textUser.addTextListener(textUser);
         textPass.addTextListener(textPass);
-        
+
         buttonOk.addActionListener(this);
         buttonCancel.addActionListener(this);
     }
@@ -93,7 +93,7 @@ public class LoginFrame extends Frame implements ActionListener, Mediator {
             textUser.setColleagueEnabled(false);
             textPass.setColleagueEnabled(false);
             buttonOk.setColleagueEnabled(true);
-        } else { // Login  체크박스가 선택되었다면
+        } else { // Login 체크박스가 선택되었다면
             // 사용자 로그인
             textUser.setColleagueEnabled(true);
             userpassChanged();

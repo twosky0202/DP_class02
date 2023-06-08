@@ -3,6 +3,7 @@ package ch17.Sample;
 import java.util.ArrayList;
 import java.util.List;
 
+// 관찰 대상
 public abstract class NumberGenerator {
     // Observer를 저장한다
     private List<Observer> observers = new ArrayList<>();

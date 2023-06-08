@@ -23,7 +23,7 @@ public class PrintNumberGenerator extends NumberGenerator {
         }
     }
 
-    public boolean isPrimeNumber(int num) {
+    public boolean isPrimeNumber(int num) { // 소수인지 검사
         // i : num에 나눌 값, for문을 한 바퀴 돌 때마다 1씩 증가한다.
         for (int i = 2; i < num; i++) {
             // 순차적으로 i를 num에 나누어본다.

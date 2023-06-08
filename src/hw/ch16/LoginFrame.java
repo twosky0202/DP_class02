@@ -137,7 +137,7 @@ public class LoginFrame extends Frame implements ActionListener, Mediator {
 
     private void userSSNChanged() {
         if (textSSN.getText().length() > 0) {
-            if (Character.isDigit(textSSN.getText().charAt(textSSN.getText().length() - 1))) {
+            if (Character.isDigit(textSSN.getText().charAt(textSSN.getText().length() - 1))) { // 마지막 문자가 숫자인지 검사
                 if (textSSN.getText().length() == 13) {
                     buttonOk.setColleagueEnabled(true);
                 } else {
@@ -145,9 +145,9 @@ public class LoginFrame extends Frame implements ActionListener, Mediator {
                 }
             } else {
                 buttonOk.setColleagueEnabled(false);
-                JOptionPane.showMessageDialog(null, "문자를 입력하지 마세요.");
-                textSSN.setText(textSSN.getText().substring(0, textSSN.getText().length() - 1));
-                textSSN.setCaretPosition(textSSN.getText().length());
+                JOptionPane.showMessageDialog(null, "문자를 입력하지 마세요."); // 경고 창
+                textSSN.setText(textSSN.getText().substring(0, textSSN.getText().length() - 1)); // textSSN 객체에서 텍스트를 가져와서 0부터 마지막 문자를 제외한 부분을 추출한 후, 추출한 부분 문자열로 텍스트를 업데이트
+                textSSN.setCaretPosition(textSSN.getText().length()); // 커서의 위치를 텍스트의 끝으로 설정
             }
         }
 

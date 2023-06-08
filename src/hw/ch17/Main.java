@@ -15,7 +15,7 @@ public class Main {
         png.addObserver(observer2);
         png.addObserver(observer3);
 
-        // 관찰대상에게 숫자 생성 요청
+        // 관찰대상에게 숫자 생성 요청 -> 소수일 때만 출력
         png.execute();
     }
 }

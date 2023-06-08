@@ -16,8 +16,8 @@ public class RandomNumberGenerator extends NumberGenerator {
     @Override
     public void execute() {
         for (int i = 0; i < 20; i++) {
-            number = random.nextInt(50);
-            notifyObservers();
+            number = random.nextInt(50); // 0~49
+            notifyObservers(); // 관찰자에게 통지
         }
     }
 }

@@ -1,5 +1,6 @@
 package ch17.Sample;
 
+// 구체적 관찰자
 public class GraphObserver implements Observer {
     @Override
     public void update(NumberGenerator generator) {

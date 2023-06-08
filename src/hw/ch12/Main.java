@@ -22,5 +22,8 @@ public class Main {
 
         Display d4 = new MultiSideBorder(d3, '*', 3);
         d4.show();
+
+        Display d5 = new MultiSideBorder(new UpDownBorder(new FullBorder(new SideBorder(md, '%')), '='), '*', 3);
+        d5.show();
     }
 }
